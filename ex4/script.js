@@ -1,14 +1,11 @@
 // Make all of the boxes blue when you click the button
 // Notice that all the boxes have "class" instead of "id"
 
-var theButton = document.getElementById("myButton");
+var myButton = document.getElementById("myButton");
+var redBox = document.getElementsByClassName("box");
 
-theButton.addEventListener("click", function() {
-  box.style.backgroundColor = "blue";
-});
-
-var button = document.getElementById("myButton");
-
-button.addEventListener("click", function() {
-  box.style.backgroundColor = "blue";
+myButton.addEventListener("click", function() {
+  for (let i = 0; i < redBox.length; i++) {
+    redBox[i].style.backgroundColor = "blue";
+  }
 });
